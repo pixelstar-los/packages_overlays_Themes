@@ -61,6 +61,7 @@ PRODUCT_PACKAGES += \
     FontBariolSourceOverlay \
     FontBellotaSourceOverlay \
     FontCagliostroSourceOverlay \
+    FontCircularStdSourceOverlay \
     FontCoconSourceOverlay \
     FontComfortaaSourceOverlay \
     FontComicSansSourceOverlay \
