@@ -70,6 +70,7 @@ PRODUCT_PACKAGES += \
     FontExotwoSourceOverlay \
     FontFifa2018SourceOverlay \
     FontFucekSourceOverlay \
+    FontFixelSourceOverlay \
     FontGInterOverlay \
     FontGeometosOverlay \
     FontGrandHotelSourceOverlay \
