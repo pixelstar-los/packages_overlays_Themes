@@ -95,7 +95,7 @@ PRODUCT_PACKAGES += \
     FontReemKufiSourceOverlay \
     FontRobotoFlexOverlay \
     FontRosemarySourceOverlay \
-    FontRubikRubikOverlay \
+    FontRubikSourceOverlay \
     FontSamOverlay \
     FontSamsungOneSourceOverlay \
     FontSimpleDaySourceOverlay \
