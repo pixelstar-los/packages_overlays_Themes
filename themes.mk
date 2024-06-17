@@ -31,6 +31,7 @@ PRODUCT_PACKAGES += \
     Lato-Medium.ttf \
     Lato-Regular.ttf \
     Lustria-Regular.ttf \
+    RobotoFallback-VF.ttf \
     Rubik-BoldItalic.ttf \
     Rubik-Bold.ttf \
     Rubik-Italic.ttf \
