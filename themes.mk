@@ -112,22 +112,19 @@ PRODUCT_PACKAGES += \
 # Icon shapes
 PRODUCT_PACKAGES += \
     IconShapeFlowerOverlay \
-    IconShapeHeartOverlay \
-    IconShapeHexagonOverlay \
     IconShapeCloudyOverlay \
     IconShapeCylindricalOverlay \
     IconShapeRiceBallsOverlay \
     IconShapeStretchedOverlay \
     IconShapePebbleOverlay \
+    IconShapeSquareOverlay \
     IconShapeRoundedRectOverlay \
     IconShapeSquircleOverlay \
     IconShapeTaperedRectOverlay \
     IconShapeTeardropOverlay \
     IconShapeVesselOverlay \
     IconShapeRoundedHexagonOverlay \
-    IconShapeScrollOverlay \
     IconShapeIosOverlay \
-    IconShapeRohieMeowOverlay \
     IconShapeLeafyOverlay
 
 # Icon Packs
