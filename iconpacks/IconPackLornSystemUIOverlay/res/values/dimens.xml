@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="signal_cluster_battery_padding">0dp</dimen>
+    <dimen name="signal_cluster_battery_padding">4dp</dimen>
+    <dimen name="status_bar_battery_icon_height">24dp</dimen>
+    <dimen name="status_bar_battery_icon_width">14dp</dimen>
 </resources>
