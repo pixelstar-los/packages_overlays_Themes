@@ -12,59 +12,28 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Build some fonts
+LOCAL_PATH := $(call my-dir)
+include $(call all-subdir-makefiles,$(LOCAL_PATH))
+
+# Customizations
 PRODUCT_PACKAGES += \
-    ArbutusSlab-Regular.ttf \
-    Barlow-Bold.ttf \
-    Barlow-Medium.ttf \
-    BigShouldersText-Bold.ttf \
-    BigShouldersText-ExtraBold.ttf \
-    Fraunces-Regular.ttf \
-    Fraunces-SemiBold.ttf \
-    GoogleSans-Italic.ttf \
-    GoogleSans-Regular.ttf \
-    Karla-Regular.ttf \
-    Lato-BoldItalic.ttf \
-    Lato-Bold.ttf \
-    Lato-Italic.ttf \
-    Lato-MediumItalic.ttf \
-    Lato-Medium.ttf \
-    Lato-Regular.ttf \
-    Lustria-Regular.ttf \
-    RobotoFallback-VF.ttf \
-    Rubik-BoldItalic.ttf \
-    Rubik-Bold.ttf \
-    Rubik-Italic.ttf \
-    Rubik-MediumItalic.ttf \
-    Rubik-Medium.ttf \
-    Rubik-Regular.ttf \
-    ZillaSlab-MediumItalic.ttf \
-    ZillaSlab-Medium.ttf \
-    ZillaSlab-SemiBoldItalic.ttf \
-    ZillaSlab-SemiBold.ttf 
-
-# Copy fonts
-LOCAL_PATH := packages/overlays/Themes/fonts
-PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,$(LOCAL_PATH)/prebuilt,$(TARGET_COPY_OUT_PRODUCT)/fonts)
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/fonts_customization.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/fonts_customization.xml
+    LineageNavigationBarNoHint \
+    AndroidBlackThemeOverlay
 
 # Font Overalys
 PRODUCT_PACKAGES += \
+    fonts_customization.xml \
     FontAclonicaSourceOverlay \
-    FontAmanteSourceOverlay \
+    FontAmaranteSourceOverlay \
     FontAntipastoProSourceOverlay \
     FontApiceOverlay \
-    FontArbutusSourceOverlay \
-    FontArvoLatoOverlay \
     FontAudimatOverlay \
     FontBariolSourceOverlay \
     FontBellotaSourceOverlay \
     FontCagliostroSourceOverlay \
     FontCircularStdSourceOverlay \
     FontCoconSourceOverlay \
-    FontComfortaaSourceOverlay \
+    FontComfortaSourceOverlay \
     FontComicSansSourceOverlay \
     FontCoolstorySourceOverlay \
     FontEvolveSansSourceOverlay \
@@ -76,7 +45,6 @@ PRODUCT_PACKAGES += \
     FontGeometosOverlay \
     FontGrandHotelSourceOverlay \
     FontHarmonySansOverlay \
-    FontKaiOverlay \
     FontLGSmartGothicSourceOverlay \
     FontLemonMilkSourceOverlay \
     FontLinotteSourceOverlay \
@@ -98,22 +66,18 @@ PRODUCT_PACKAGES += \
     FontRobotoFlexOverlay \
     FontRosemarySourceOverlay \
     FontRubikSourceOverlay \
-    FontSamOverlay \
     FontSamsungOneSourceOverlay \
     FontSimpleDaySourceOverlay \
     FontSonySketchSourceOverlay \
     FontStoropiaSourceOverlay \
     FontSurferSourceOverlay \
     FontUbuntuSourceOverlay \
-    FontVictorOverlay \
-    FontGoogleSansClockOverlay \
-    FontGoogleSansOverlay
+    FontGoogleSansClockOverlay 
 
 # Icon shapes
 PRODUCT_PACKAGES += \
     IconShapeFlowerOverlay \
     IconShapeCloudyOverlay \
-    IconShapeCylindricalOverlay \
     IconShapeRiceBallsOverlay \
     IconShapeStretchedOverlay \
     IconShapePebbleOverlay \
@@ -188,3 +152,10 @@ PRODUCT_PACKAGES += \
     IconPackXperiaAndroidOverlay \
     IconPackXperiaSettingsOverlay \
     IconPackXperiaSystemUIOverlay
+
+# Include {Lato,Rubik} fonts
+$(call inherit-product-if-exists, external/google-fonts/lato/fonts.mk)
+$(call inherit-product-if-exists, external/google-fonts/rubik/fonts.mk)
+
+PRODUCT_COPY_FILES += \
+    $(call find-copy-subdir-files,*,packages/overlays/Themes/prebuilt/product/fonts,$(TARGET_COPY_OUT_PRODUCT)/fonts)
